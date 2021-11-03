@@ -1,0 +1,27 @@
+extends layouts/default
+
+block pageVar
+    -pageTitle = 'Список страниц';
+
+block content
+    .page-container
+        .content-wrapper
+            div.pagelist(style="padding:50px")
+                a(href="/html/main.html" target="_blank") Главная страница
+                a(href="/html/home-page.html" target="_blank") Домашняя страница
+                a(href="/html/blog.html" target="_blank") Блог
+                a(href="/html/news.html" target="_blank") Новости
+                a(href="/html/partners.html" target="_blank") Партнеры
+                a(href="/html/video.html" target="_blank") Видео
+                a(href="/html/videopost.html" target="_blank") Видео пост
+                a(href="/html/fighters-list.html" target="_blank") Список бойцов
+                a(href="/html/fighter.html" target="_blank") Боец
+                a(href="/html/tournament.html" target="_blank") турнир
+                a(href="/html/tournament-page.html" target="_blank") турнир-page
+                a(href="/html/tournament-page-ended.html" target="_blank") турнир-page-ended
+                a(href="/html/upgrade.html" target="_blank") upgrade browser
+    style.
+        .pagelist a {
+            display: block;
+            padding: 5px 0;
+        }

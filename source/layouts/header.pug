@@ -1,0 +1,106 @@
+
+header.header
+    -
+        var menu =  [
+                {
+                    name: 'Турниры',
+                    url: '#',
+                },
+                {
+                    name: 'Новости',
+                    url: '/html/news.html',
+                },
+                {
+                    name: 'Фото',
+                    url: '#',
+                },
+                {
+                    name: 'Видео',
+                    url: '/html/video.html',
+                },
+                {
+                    name: 'Бойцы',
+                    url: '#',
+                },
+                {
+                    name: 'Партнеры',
+                    url: '/html/partners.html',
+                },
+                {
+                    name: 'Статистика',
+                    url: '#',
+                },
+                {
+                    name: 'О нас',
+                    url: '#',
+                },
+                {
+                    name: 'Голосование',
+                    url: '#',
+                },
+                {
+                    name: 'Awards',
+                    url: '#',
+                },]
+    .header-inner.js-header
+        .header__top.header-top
+            .content-wrapper
+                .header__top-inner
+                    .header-top__img
+                        img(src="/f/img/top-logo.jpg", alt="")
+                    .headde-top__info
+                        .header-top__info-title
+                            | АКЦИЯ GoRILLA <br>MMA SERIES
+                        .header-top__info-text
+                            | Бесплатный просмотр турниров
+                    .header-top__link
+                        a(href="#").skew
+                            .skew__inner Подробнее
+        .header-bottom-box
+            .header__bottom.header-bottom
+                .content-wrapper
+                    .header-bottom__inner
+                        .header-bottom__left.header-bottom-left
+                            .header-bottom-left__link
+                                a(href="#")
+                                    .skew
+                                        .skew__inner.header-bottom-left__block
+                                            .header-bottom-left__logo
+                                                .header-bottom-left__logo-inner
+                                                //-img(src="/f/img/triangle.svg", alt="")
+                                            .header-bottom-left__text
+                                                .header-bottom-left__text-inner
+                                                    | Смотреть прямой эфир
+                        .header-bottom__right
+                            .network.network--black
+                                each item in ['Vk','Yt','Fb','In',]
+                                    .network__item
+                                        a(href="#")
+                                            .skew.network__item-link
+                                                .skew__inner !{item}
+                            .header-language.js-active
+                                a(href="#").header-language__item.is-active Рус
+                                a(href="#").header-language__item Eng
+
+            .header-strip
+                .content-wrapper
+                    .header-strip__inner
+                        a(href="#").header-strip__logo
+                            img(src="/f/img/gorilla-text-logo.png", alt="logo")
+                        nav.header-strip__menu
+                            ul.header-strip__list
+                                each item in menu
+                                    li.header-strip__item
+                                        a.header-strip__item-link(href=""+item.url) !{item.name}
+                                li.header-strip__item--mobile
+                                    a(href="#") Регистрация
+                        .header-strip__reg-block
+                            .burger
+                                div
+                                div
+                                div
+                            .header-strip__reg
+                                    a(href="#").skew
+                                       .skew__inner Регистрация
+
+

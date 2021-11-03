@@ -1,0 +1,79 @@
+extends layouts/default
+
+block pageVar
+    -pageTitle = 'Новости';
+
+block content
+    .page-container
+        .top__bg
+            .news-head
+                .news-head__img.br--rb(style="background-image: url('/f/img/blog/big-bg.jpg'); background-size: " +
+                "cover;" +
+                "background-position: 48% 50%")
+                .news-head__info
+                    .news-head__date 28 июня 2021
+                    .news-head__text
+                        | Мини-юбилей прошел на <br>
+                        | пять баллов: Горилла <br>
+                        | ММА Серия провела <br>
+                        | 35-й турнир
+                    .news-head__more
+                        a(href="#").skew
+                            .skew__inner узнать больше
+        .content-wrapper
+            .news-block
+                .news-block__head
+                    h2.title.skew
+                        .skew__inner НОВОСТИ
+                    .news-block__search
+                        label.news-block__label.news-block__label-inp.skew
+                            input(type="text" name="newsSearch" class="news-block__input skew__inner" placeholder="Введите слово для поиска")
+                            span.input-ico-lens
+                        label.news-block__label.news-block__label-btn.skew
+                            button.news-block__input-btn
+                                .skew__inner Поиск
+                    .news-block__search--mobile
+                        label.news-block__label.news-block__label-inp
+                            input(type="text" name="newsSearch" class="news-block__input"
+                                placeholder="Введите слово для поиска")
+                        .news-block__search-btn.skew.js-active-input
+                            button.news-block__input-btn
+                                .skew__inner.input-ico-lens
+
+                .news-block__list
+                    -
+                        var NewsBlock = [
+                            {
+                                image: '/f/img/news/news1.png',
+                                date: '14 июня 2021',
+                                text: 'Горилла ММА Серия-35: Время новых героев',
+                            },
+                            {
+                                image: '/f/img/news/news2.png',
+                                date: '14 июня 2021',
+                                text: 'Горилла ММА Серия-35: Время новых героев',
+                            },
+                            {
+                                image: '/f/img/news/news3.png',
+                                date: '14 июня 2021',
+                                text: 'Горилла ММА Серия-35: Время новых героев',
+                            }
+                        ]
+                    each item in NewsBlock
+                        +newsCard(item)
+            .banner-commercial рекламный баннер
+            .news-info
+                .news-info__top
+                    .news-info__left
+                        include _blocks/news-min
+                    .news-info__right.news-info-right
+                        include _blocks/news-list
+                .news-info__bottom
+                    .news-info__more
+                        a(href="#").more Показать ещё
+
+                    .banner-offer.banner-offer--pos
+                        img(src="/f/img/bottom-bg.png", alt="")
+
+
+

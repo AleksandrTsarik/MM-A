@@ -1,0 +1,50 @@
+.newscard-block
+   &__item
+      flex 0 0 33.333%
+      max-width 33.333%
+      padding 0 25px
+      @media $minTablet
+         &:nth-child(1)
+            flex 1 0 100%
+            max-width 100%
+            margin-bottom: 24px
+            @media $afterBigPhone
+               margin-bottom: 0
+            img
+               width 100%
+         &:nth-child(2)
+            flex 1 0 50%
+            max-width 50%
+            @media $afterBigPhone
+               flex 1 0 100%
+               max-width 100%
+         &:nth-child(3)
+            flex 1 0 50%
+            max-width 50%
+            @media $afterBigPhone
+               flex 1 0 100%
+               max-width 100%
+      @media $afterBigPhone
+         margin-bottom: 24px
+
+   &__img
+      border-radius 40px 0 40px 0
+      overflow hidden
+      //height 280px  //костыль!!!!!!!!!
+      //@media $desktop
+      //   height 195px
+      //@media $beforeTablet
+      //   height auto
+      img
+         height 100% //костыль!!!!!!!!
+         border-radius 40px 0 40px 0
+   &__inner
+      border-bottom solid 1px $grayLight
+      padding-bottom: 30px
+   &__info
+      &-date
+         font-size 14px
+         margin 20px 0 16px
+      &-text
+         font-size 24px
+         font-weight: 700

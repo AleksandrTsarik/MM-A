@@ -1,0 +1,315 @@
+*
+   margin 0
+   padding 0
+   border none medium
+html, body
+   font-size 16px
+   line-height 1.5
+   background $white
+   font-family: $Inter
+html
+   -ms-text-size-adjust: 100%;
+   -webkit-text-size-adjust: 100%;
+img
+   vertical-align bottom
+   max-width: 100%
+
+::-webkit-scrollbar
+   @media $beforePhone
+      width 10px
+      height 5px
+::-webkit-scrollbar-track
+   @media $beforePhone
+      box-shadow inset 0 0 5px #EEEEEE
+::-webkit-scrollbar-thumb
+   @media $beforePhone
+      background-color #D6D6D6
+
+*, *:focus, *:after, *:before
+   -webkit-tap-highlight-color rgba(0, 0, 0, 0)
+   -moz-box-sizing border-box
+   box-sizing border-box
+   outline none
+input, textarea
+   font-size 14px
+   background none
+   border none medium
+   resize none
+   box-shadow none
+  //color $baseFont
+   &::placeholder
+    text-overflow ellipsis
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active
+   -webkit-box-shadow: 0 0 0 30px white inset !important;
+article,aside,footer,header,nav,section,canvas
+   display block
+.content-wrapper
+   padding 0 100px
+   margin 0 auto
+   width 100%
+   @media $desktop
+      padding 0 70px
+   //@media $phone
+   //   padding 0 40px
+   @media $tablet
+      padding 0 40px
+   @media $bigPhone
+      padding 0 25px
+   @media $phoneS
+      padding 0 20px
+ol, ul
+   list-style none
+a, button, input[type="submit"], input[type="button"], input[type="reset"], label
+   border none medium
+   outline none
+   cursor pointer
+   background none
+   -webkit-text-decoration-skip objects
+a, a:active
+   text-decoration none
+.skew
+   transform skew(-20deg)
+   display inline-block
+   &__inner
+      transform skew(20deg)
+sub, sup
+   font-size 75%
+   line-height 0
+   position relative
+   vertical-align baseline
+sub
+   bottom -0.25em
+sup
+   top -0.5em
+video
+   display inline-block
+svg:not(:root)
+   overflow hidden
+.main-wrap
+   display: flex
+   flex-direction: column
+   height: 100vh
+   //width: 100vw
+.page-container
+   max-width 100%
+   overflow hidden
+   flex: 1 0 auto
+   //margin-top: 350px
+.triangle
+   width: 0
+   height: 0
+   border-top: 6px solid transparent
+   border-left: 10px solid $black
+   border-bottom: 6px solid transparent
+   display block
+
+.network
+   display flex
+   align-items center
+   //margin-right: 40px
+   &__item-link
+      border-radius 8px 0 8px 0
+      padding 5px 9px
+      transition 0.15s
+   a
+      display block
+      font-size 12px
+      line-height: 16px
+      margin 0 5px
+      transition top 1s ease-out 0.5s
+   &--black
+      a
+         color $white
+         transition 0.15s
+         &:hover .network__item-link
+            background $white
+         &:hover
+            color $black
+      .network__item-link
+         border solid 1px $white
+         transition 0.15s
+   &--white
+      transition 0.3s
+      a
+         color $black
+         transition 0.3s
+         &:hover .network__item-link
+            background $black
+         &:hover
+            color $white
+      .network__item-link
+         border solid 1px $black
+         transition 0.15s
+
+.network
+   &--black
+      background $black
+.top__bg
+   background $alice
+   border-radius 0 0 200px 0
+   @media $desktop
+      border-radius 0 0 160px
+   @media $phone
+      border-radius 0 0 140px
+   @media $bigPhone
+      border-radius 0 0 80px
+   @media $phoneS
+      border-radius 0 0 60px
+.top-bg--padding
+   padding 80px 0
+   @media $phone
+      padding 60px 0
+   @media $bigPhone
+      padding 40px 0
+
+//-----style border-radius---------////
+
+.br-80
+   border-radius 80px 0 80px 0
+   overflow hidden
+.br-60
+   border-radius 60px 0 60px 0
+   overflow hidden
+.br-40
+   border-radius 40px 0 40px 0
+   overflow hidden
+   @media $phone
+      border-radius 20px 0 20px 0
+.br-20
+   border-radius 20px 0 20px 0
+   overflow hidden
+.br--rb
+   border-radius 0 0 200px 0
+   overflow hidden
+   @media $desktop
+      border-radius 0 0 160px
+   @media $phone
+      border-radius 0 0 140px
+   @media $bigPhone
+      border-radius 0 0 80px
+   @media $phoneS
+      border-radius 0 0 60px
+
+.br--rt
+   border-radius 0 200px 0 0
+   overflow hidden
+   @media $desktop
+      border-radius 0 160px 0 0
+   @media $phone
+      border-radius 0 140px 0 0
+   @media $bigPhone
+      border-radius 0 80px 0 0
+   @media $phoneS
+      border-radius 0 60px 0 0
+
+//-----finish style border-radius---------////
+
+.title
+   border solid 1px $black
+   border-radius 8px 0 8px 0
+   text-transform uppercase
+   font-size 32px
+   line-height 42px
+   font-family: $Prosto
+   .skew__inner
+      padding 9px 37px
+      @media $desktop
+         padding 9px 40px
+      @media $phone
+         padding 9px 24px
+      @media $bigPhone
+         padding 6px 24px
+      @media screen and (max-width: 400px)
+         padding 6px 10px
+   @media $tablet
+      font-size 21px
+      line-height 26px
+   @media screen and (max-width: 400px)
+      font-size 18px
+   &-sm
+      margin-left: 15px
+      margin-right: 15px
+      .skew__inner
+         padding 9px 40px
+         @media $tablet
+            padding 9px 24px
+
+   &__link
+      display flex
+      align-items center
+      justify-content space-between
+      &-more
+         white-space nowrap
+         @media $phoneS
+            position absolute
+            bottom 74px
+            left 50%
+            transform translateX(-50%)
+
+
+ //----style link more---//
+.more
+   font-size 18px
+   font-weight: 700
+   transition 0.3s
+   border-bottom solid 2px $red
+   color $black
+   padding-bottom: 14px
+   &:hover
+      text-shadow: 0 0 5px rgba($black, 0.3)
+   @media $phone
+      font-size 16px
+   @media $bigPhone
+      font-size 14px
+//------------------------//
+
+.banner-offer
+   img
+      border-radius 70px 0 70px 0
+      width 100%
+      @media $desktop
+         border-radius 50px 0 50px 0
+      @media $desktop
+         border-radius 40px 0 40px 0
+      @media $phone
+         border-radius 20px 0 20px 0
+   &--pos
+      margin 80px 0
+      @media $phone
+         margin 60px 0
+      @media $phoneS
+         margin 40px 0
+
+.banner-commercial
+   background $alice
+   //padding 88px 0
+   text-transform uppercase
+   text-align center
+   font-size 42px
+   border-radius 80px 0 80px
+   margin: 80px 0
+   height 240px
+   line-height 240px
+   @media $desktop
+      font-size 34px
+      height 168px
+      line-height 168px
+   @media $phone
+      font-size 22px
+      height 96px
+      line-height 96px
+      border-radius 40px 0 40px
+      margin 60px 0
+   @media $bigPhone
+      height 60px
+      line-height 60px
+      border-radius 20px 0 20px
+      margin 40px 0
+      font-size 16px
+   @media $phoneS
+      //font-size 18px
+      height 40px
+      line-height 40px

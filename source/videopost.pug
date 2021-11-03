@@ -1,0 +1,39 @@
+extends layouts/default
+
+block pageVar
+  -pageTitle = 'Видео пост';
+block content
+  .page-container
+    .top__bg.top-bg--padding
+      .content-wrapper
+        .vp-head
+          .vp-head__date 28 июня 2021
+          .vp-head__text Мини-юбилей прошел на пять баллов: Горилла ММА Серия провела 35-й турнир
+          .vp-head__network
+            .vp-head__network-row Поделиться
+            .vp-head__network-block
+              .network.network--white
+                each item in ['Vk','Yt','Fb',]
+                  .network__item
+                    a(href="#")
+                      .skew.network__item-link
+                        .skew__inner !{item}
+    .content-wrapper
+        .vp-head__img
+            img(src="/f/img/video-post-bg.jpg", alt="")
+
+        .banner-commercial рекламный баннер
+
+    .vp-body-video.br--rb
+      .content-wrapper
+        .vp-body-video__title.vp-body-video-head
+          h2.skew.title
+            .skew__inner ВИДЕО
+          .vp-body-video__link-more
+            a(href="#").more Показать все
+        .vp-body-video__choice
+          include _blocks/video-list
+    .content-wrapper
+      .vp-footer
+      .banner-offer.banner-offer--pos
+        img(src="/f/img/bottom-bg.png", alt="")

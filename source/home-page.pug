@@ -1,0 +1,274 @@
+extends layouts/default
+
+block pageVar
+    -pageTitle = 'Домашняя страница';
+
+block content
+    -
+        var tournament =
+                [
+                    {
+                        img: '/f/img/tournament/item4.jpg',
+                        date: 'Суббота, 12 Июня 2021',
+                        text: 'Горилла ММА Серия — 34 : Сердце и кулак Башкортостана',
+                        location: 'Уфа',
+                    },
+                    {
+                        img: '/f/img/tournament/item4.jpg',
+                        date: 'Суббота, 12 Июня 2021',
+                        text: 'Горилла ММА Серия — 34 : Сердце и кулак Башкортостана',
+                        location: 'Уфа',
+                    },
+                    {
+                        img: '/f/img/tournament/item4.jpg',
+                        date: 'Суббота, 12 Июня 2021',
+                        text: 'Горилла ММА Серия — 34 : Сердце и кулак Башкортостана',
+                        location: 'Уфа',
+                    },
+                    {
+                        img: '/f/img/tournament/item4.jpg',
+                        date: 'Суббота, 12 Июня 2021',
+                        text: 'Горилла ММА Серия — 34 : Сердце и кулак Башкортостана',
+                        location: 'Уфа',
+                    },
+                    {
+                        img: '/f/img/tournament/item4.jpg',
+                        date: 'Суббота, 12 Июня 2021',
+                        text: 'Горилла ММА Серия — 34 : Сердце и кулак Башкортостана',
+                        location: 'Уфа',
+                    },
+                    {
+                        img: '/f/img/tournament/item4.jpg',
+                        date: 'Суббота, 12 Июня 2021',
+                        text: 'Горилла ММА Серия — 34 : Сердце и кулак Башкортостана',
+                        location: 'Уфа',
+                    },
+                    {
+                        img: '/f/img/tournament/item4.jpg',
+                        date: 'Суббота, 12 Июня 2021',
+                        text: 'Горилла ММА Серия — 34 : Сердце и кулак Башкортостана',
+                        location: 'Уфа',
+                    },
+                    {
+                        img: '/f/img/tournament/item4.jpg',
+                        date: 'Суббота, 12 Июня 2021',
+                        text: 'Горилла ММА Серия — 34 : Сердце и кулак Башкортостана',
+                        location: 'Уфа',
+                    },
+                    {
+                        img: '/f/img/tournament/item4.jpg',
+                        date: 'Суббота, 12 Июня 2021',
+                        text: 'Горилла ММА Серия — 34 : Сердце и кулак Башкортостана',
+                        location: 'Уфа',
+                    },
+
+
+                ]
+        var minVideo =
+                [
+                    {
+                        image: '/f/img/list/item-1.jpg',
+                        date: '14 июня 2021',
+                        text: 'Горилла ММА Серия — 34: Юнир Бикбаев (Россия) – Бекболот Кимсаньоев (Кыргызстан)',
+                        url: '#',
+                    },
+                    {
+                        image: '/f/img/list/item-2.jpg',
+                        date: '14 июня 2021',
+                        text: 'Прыжок в стиле Хабиба ???? Выбил капу ногой Темирхан Термиханов – Улугбек Осканов',
+                        url: '#',
+                    },
+                    {
+                        image: '/f/img/list/item-3.jpg',
+                        date: '14 июня 2021',
+                        text: 'Горилла ММА Серия-34: Сердце и кулак Башкортостана – Результаты',
+                        url: '#',
+                    },
+                ]
+        var IconPartners =
+                [
+                    {
+                        img: "/f/img/partners/clash.svg",
+                    },
+                    {
+                        img: "/f/img/partners/gorilla.svg",
+                    },
+                    {
+                        img: "/f/img/partners/ls.svg",
+                    },
+                    {
+                        img: "/f/img/partners/chemp.svg",
+                    },
+                    {
+                        img: "/f/img/partners/ivi.svg",
+                    },
+                    {
+                        img: "/f/img/partners/megogo.svg",
+                    },
+                    {
+                        img: "/f/img/partners/parter.svg",
+                    },
+                    {
+                        img: "/f/img/partners/kassir.svg",
+                    },
+
+
+                ]
+        var newsBlock =
+                [
+                    {
+                        date: '14 июня 2021',
+                        text: 'Горилла ММА Серия-34: Полный файткард',
+                    },
+                    {
+                        date: '14 июня 2021',
+                        text: 'Горилла ММА Серия-34: Полный файткард',
+                    },
+                    {
+                        date: '14 июня 2021',
+                        text: 'Горилла ММА Серия-34: Полный файткард',
+                    },
+                    {
+                        date: '14 июня 2021',
+                        text: 'Горилла ММА Серия-34: Полный файткард',
+                    },
+                ]
+
+    .page-container
+        .top__bg
+            .home-top
+                .home-top__img.br--rb(style="background-image: url('../f/img/home-page_bg.png'); background-size: " +
+                "cover;" +
+                "background-position: 48% 50%")
+                     //img(src="/f/img/home-fighters1.png", alt="")
+                .home-top__info
+                    .home-top__info-inner
+                        .home-top__statistics.skew
+                            .skew__inner 41 / 33 / 8
+                        .home-top__fighters
+                            .home-top__fighters-inner
+                                .home-top__name Александр <br> Волков
+                                .home-top__name Федор <br> Емельяненко
+                            .home-top__enemy.skew
+                                .skew__inner vs
+                        .home-top__statistics.skew
+                            .skew__inner 46 / 39 / 6
+                        .home-top-more
+                            .home-top-more__location
+                                .home-top-more__date 17 АПРЕЛЯ
+                                .home-top-more__time 9:00 МСК
+                            .home-top-more__link
+                                a(href="#" class="skew")
+                                    .skew__inner узнать больше
+        .home-news
+            .content-wrapper
+                .home-news-inner
+                    .home-news__title
+                        h2.skew.title
+                            .skew__inner НОВОСТИ
+                        .title__link-more
+                            a(href="#").more Показать все
+                    .home-news__box
+                        .home-news__row
+                            .home-news-block--big
+                                .home-news-block
+                                    .home-news-block-inner
+                                        .home-news-block__img
+                                            img(src="/f/img/news/news4.jpg", alt="")
+                                        .home-news-block__info
+                                            .home-news-block__date 14 июня 2021
+                                            .home-news-block__text Горилла ММА Серия провела 34-й турнир в Уфе
+
+                            .home-news-block--small
+                                .home-news-block
+                                    .home-news-block-inner
+                                        .home-news-block__img
+                                            img(src="/f/img/news/news5.jpg", alt="")
+                                        .home-news-block__info
+                                            .home-news-block__date 14 июня 2021
+                                            .home-news-block__text Горилла ММА Серия-34: Сердце и кулак Башкортостана – Результаты
+                                .home-news-block
+                                    .home-news-block-inner
+                                        .home-news-block__img
+                                            img(src="/f/img/news/news6.jpg", alt="")
+                                        .home-news-block__info
+                                            .home-news-block__date 14 июня 2021
+                                            .home-news-block__text Горилла ММА Серия-34: Церемония взвешивания состоится 11 июня
+                        .home-news__column
+                            .home-news__list
+                                each item in newsBlock
+                                    .home-news__item
+                                        .home-news__item-date !{item.date}
+                                        .home-news__item-text !{item.text}
+
+        .content-wrapper
+            .banner-commercial рекламный баннер
+
+        .home-video.br--rt
+            .content-wrapper
+                .video-news
+                    .video-news__title.home-video__title.home-news__title-wrap
+                        h2.skew.title
+                            .skew__inner ВИДЕО
+                        .title__link-more
+                            a(href="#").more Показать все
+                    .video-news__inner
+                        .video-news__left.video-news-left
+                            a(href="#").video-news-left__item
+                                .video-news-left__video.br-40
+                                    img(src="/f/img/big-video.png", alt="")
+                                .video-news-left__date
+                                    | Суббота, 26 Июня, 19:00
+                                .video-news-left__text
+                                    | Горилла ММА Серия — 34: Сергей Дяконов (Россия – Евгений Михалев (Россия)
+                        .video-news__right.video-news-right
+                            .video-news-right__list
+                                each item in minVideo
+                                    a.video-news-right__item(href="" + item.url)
+                                        .video-news-right__img.br-40
+                                            img(src="" + item.image alt="")
+                                        .video-news-right__info
+                                            .video-news-right__date !{item.date}
+                                            .video-news-right__text !{item.text}
+
+        .home-tournament.br--rb
+            .title__link-more
+                a(href="#").more Показать все
+            .home-tournament__left.home-tournament-left
+                .home-tournament-left__inner
+                    .home-tournament__title
+                        h2.skew.title
+                            .skew__inner ТУРНИРЫ
+                    .home-tournament-left__box
+                        .home-tournament-left__img
+                            img(src="/f/img/tournament/item3.jpg", alt="")
+                        .home-tournament-left__block-text
+                            .home-tournament-left__notice Предстоящий турнир
+                            .home-tournament-left__info
+                                .home-tournament-left__location Санкт-Петербург
+                                .home-tournament-left__date Суббота, 26 Июня, 19:00
+                            .home-tournament-left__text Горилла ММА Серия — 35 : Время новых героев
+
+            .home-tournament__right.home-tournament-right
+                h4.home-tournament-right__title Прошедшие турниры
+                .home-tournament-right__slider
+                    #content.home-slider-list.container.showcase.horizontal-images.content
+                        each item in tournament
+                            .home-slider-list__item
+                                .home-slider-list__item-img
+                                    img(src=""+item.img, alt="")
+                                .home-slider-list__item-date !{item.date}
+                                .home-slider-list__item-text !{item.text}
+                                .home-slider-list__item-location !{item.location}
+        .content-wrapper
+            .banner-offer.banner-offer--pos
+                img(src="/f/img/bottom-bg.png", alt="")
+
+        .home-bottom.br--rt
+            .content-wrapper
+                h2.skew.title.home-bottom__title
+                    .skew__inner партнеры
+                .home-partners__list
+                    each item in IconPartners
+                        a(href="#").home-partners__item
+                            img(src="" + item.img alt="")

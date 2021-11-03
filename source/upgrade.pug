@@ -1,0 +1,27 @@
+extends layouts/default
+
+block pageVar
+    -pageTitle = 'Обновите Ваш браузер';
+
+block content
+    .page-container
+        .upgrade
+            .upgrade-wrap
+                .upgrade-inner
+                    .upgrade__logo
+                        img(src="/f/img/gorilla-text-logo.png", alt="logo")
+                    .upgrade__title
+                        h1 Обновиет Ваш браузер
+                    .upgrade__text
+                      | Этот браузер не соответствует стандартам безопасности ММ-А, поэтому мы его больше не поддерживаем. Пожалуйста обновите или установите другой браузер.
+                    .upgrade__link
+                        .upgrade__link-title
+                        | Мы рекомендуем использовать один из современных бпаузеров:
+                        a(href="https://www.google.ru/intl/en_ca/chrome/" ) Chrome,
+                        a(href="https://microsoft-edge.softok.info/" ) Edge,
+                        a(href="https://www.mozilla.org/ru/" ) Firefox,
+                        a(href="https://www.opera.com/ru" ) Opera,
+                        a(href="https://www.apple.com/ru/safari/" ) Safari
+block footer
+    include layouts/footer
+    include layouts/scripts

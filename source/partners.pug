@@ -1,0 +1,53 @@
+extends layouts/default
+
+block pageVar
+    -pageTitle = 'Партнеры';
+block content
+    -
+        var mediaPartners = ['/f/img/partners/clash.svg', '/f/img/partners/chemp.svg', '/f/img/partners/ivi' +
+        '.svg', '/f/img/partners/megogo.svg']
+        var ticket = ['/f/img/partners/parter.svg','/f/img/partners/kassir.svg','/f/img/partners/robokassa.svg']
+        var sponsor = ['/f/img/partners/rubl.svg','/f/img/partners/ls.svg',]
+    .page-container.page-container-head.part-page
+        .part-head.part-block-item
+            | Партнеры
+        .part-general.part-block-item
+            .content-wrapper
+                h2.title.title-sm.skew.part-general__title
+                    .skew__inner ГЕНЕРАЛЬНЫЙ ПАРТНЕР
+                .part-item.part-general-item
+                    a.part-link(href="#" target="_blank")
+                        img(src="/f/img/partners/gorilla.svg", alt="")
+        .part-media.part-block-item
+            .content-wrapper
+                h2.title.title-sm.skew.part-media__title
+                    .skew__inner МЕДИА ПАРТНЕР
+
+                .part-media__list
+                    each item  in mediaPartners
+                        .part-media__list-item
+                            a.part-link(href="#" target="_blank")
+                                img(src=""+item, alt="")
+
+        .part-ticket.part-block-item
+            .content-wrapper
+                h2.title.title-sm.skew.part-ticket__title
+                    .skew__inner БИЛЕТНЫЕ ОПЕРАТОРЫ
+                .part-ticket__list
+                    each item in ticket
+                        .part-ticket__list-item
+                            a.part-link(href="#" target="_blank")
+                                img(src="" + item, alt="")
+
+        .part-sponsor.part-block-item
+            .content-wrapper
+                h2.title.skew.part-sponsor__title.title-sm
+                    .skew__inner СПОНСОРЫ
+                .part-sponsor__list
+                    each item in sponsor
+                        .part-sponsor__list-item
+                            a.part-link(href="#" target="_blank")
+                                img(src="" + item, alt="")
+        .content-wrapper
+            .banner-offer.banner-offer--pos
+                img(src="/f/img/bottom-bg.png", alt="")

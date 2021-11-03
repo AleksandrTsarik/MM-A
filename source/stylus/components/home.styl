@@ -1,0 +1,587 @@
+.home
+   &-top
+      display flex
+      align-items stretch
+      @media $beforePhone
+         flex-wrap wrap
+      &__img
+         flex 0 0 50%
+         max-width 50%
+         margin-right: 100px
+         overflow hidden
+         @media $desktop
+            margin-right: 80px
+         @media $beforeTablet
+            margin-right: 50px
+         @media $phone
+            margin-right: 45px
+         @media $beforePhone
+            flex 0 0 100%
+            max-width 100%
+            padding-bottom 65%
+      &__info
+         flex 0 0 50%
+         max-width 50%
+         margin-left: 100px
+         padding 80px 100px 80px 0
+         @media $desktop
+            margin-left: 80px
+         @media $beforeTablet
+            padding-right 150px
+            margin-left: 50px
+         @media $phone
+            padding 40px 130px 40px 0
+            margin-left: 45px
+         @media $beforePhone
+            padding 40px 40px
+            display flex
+            flex-direction column
+            align-items center
+            flex 0 0 100%
+            max-width 100%
+            margin-left: 0
+         @media $beforePhone
+            padding 40px 40px
+         @media $bigPhone
+            padding 24px 25px 40px
+         @media $phoneS
+            padding 24px 20px
+            align-items flex-start
+      &__statistics
+         border solid 1px $black
+         border-radius 6px 0 6px 0
+         width 106px
+         height 30px
+         text-align center
+         line-height 30px
+         font-size 14px
+         @media $phone
+            font-size 8px
+            width 55px
+            height 16px
+            line-height 16px
+         @media $beforePhone
+            width 106px
+            height 30px
+            text-align center
+            line-height 30px
+            font-size 14px
+         @media $bigPhone
+            font-size 8px
+            width 55px
+            height 16px
+            line-height 16px
+      &__name
+         font-size 42px
+         line-height 52px
+         font-family: $Prosto
+         text-transform uppercase
+         @media $afterDesktop
+            font-size 34px
+            line-height 44px
+         @media $beforeTablet
+            font-size 24px
+            line-height 29px
+         @media $beforePhone
+            font-size 34px
+            line-height 44px
+         @media $bigPhone
+            font-size 24px
+            line-height 29px
+      &__name + &__name
+         margin-top: 10px
+         @media $beforeBigPhone
+            margin-top: 40px
+      &__fighters
+         position relative
+         margin 10px 0
+      &__enemy
+         position absolute
+         top 50%
+         transform translateY(-50%) skew(-20deg)
+         left -118px
+         border solid 1px $red
+         padding 5px 23px
+         font-size 32px
+         text-align center
+         color $red
+         border-radius 8px 0 8px 0
+         font-family: $Prosto
+         @media $beforeTablet
+            font-size 22px
+            padding 5px 10px
+            left -70px
+         @media $phone
+            font-size 14px
+            left -64px
+            padding 1px 8px
+         @media $beforePhone
+            font-size 22px
+            padding 5px 10px
+            left -70px
+         @media $bigPhone
+            font-size 14px
+            left -64px
+            padding 1px 8px
+         @media $beforeBigPhone
+            left 0
+      &-more
+         display flex
+         margin-top: 40px
+         align-items flex-start
+         @media $beforeTablet
+            flex-wrap wrap
+         &__date
+            font-size 24px
+            font-family: $Prosto
+            @media $afterDesktop
+               font-size 18px
+            @media $phone
+               font-size 14px
+            @media $beforePhone
+               font-size 18px
+            @media $bigPhone
+               font-size 14px
+         &__location
+            margin-right: 22px
+            margin-bottom: 12px
+         &__time
+            font-size 14px
+            font-family: $Prosto
+            color rgba($black, 0.5)
+            @media $phone
+               font-size 8px
+            @media $beforePhone
+               font-size 14px
+            @media $bigPhone
+               font-size 8px
+         &__link
+            a
+               border-radius 8px 0 8px 0
+               padding 12px 37px
+               background $red
+               font-size 18px
+               color $white
+               text-transform uppercase
+               transition 0.3s
+               &:hover
+                  box-shadow 0 0 10px rgba(black, 0.7)inset
+               @media $afterDesktop
+                  font-size 14px
+               @media $phone
+                  font-size 10px
+                  padding 7px 26px
+               @media $beforePhone
+                  padding 12px 37px
+                  font-size 14px
+               @media $bigPhone
+                  font-size 10px
+                  padding 7px 26px
+      //------news-----//
+   &-news
+      &-inner
+         position relative
+         @media $beforeBigPhone
+            .title__link-more
+               position absolute
+               bottom 20px
+               left 50%
+               transform translateX(-50%)
+      &__title
+         display flex
+         align-items center
+         justify-content space-between
+         margin-top: 80px
+      &__box
+         margin 40px -20px 0
+         display flex
+         align-items flex-start
+         @media $beforeTablet
+            flex-wrap wrap
+         @media $beforeBigPhone
+            padding-bottom 70px
+      &__row
+         display flex
+         margin-left: -10px
+         flex 0 0 76%
+         max-width 76%
+         @media $beforeTablet
+            flex 0 0 100%
+            max-width 100%
+         @media $phone
+            margin-left: 0
+         @media $beforePhone
+            flex-wrap wrap
+      &__column
+         flex 0 0 24%
+         max-width 24%
+         padding 0 20px
+         @media $beforeTablet
+            flex 0 0 100%
+            max-width 100%
+      &__item
+         border-bottom solid 1px $grayLight
+         padding 12.5px 0
+         &:first-child
+            border-top solid 1px $grayLight
+            @media $beforeTablet
+               border-top none
+               margin-top: 24px
+         &-date
+            font-size 14px
+            margin-bottom: 12px
+         &-text
+            font-size 18px
+            font-weight: 700
+            line-height 22px
+      &-block
+         &__img
+            img
+               border-radius 40px 0 40px 0
+               @media $beforeBigPhone
+                  border-radius 20px 0 20px 0
+         &-inner
+            border-bottom solid 1px $grayLight
+            padding-bottom: 24px
+         &__date
+            font-size 14px
+            color $black
+            margin-bottom: 24px
+            @media $beforePhone
+               margin-bottom: 16px
+         &__text
+            font-size 24px
+            color $black
+            font-weight: 700
+            line-height 29px
+         &--big
+            width 46%
+            //flex 0 0 44%
+            //max-width 44%
+            padding 0 20px
+            @media $phone
+               padding 0 10px
+            @media $beforePhone
+               width 100%
+               margin-bottom: 24px
+               padding 0 20px
+            .home-news-block__img
+               margin-bottom: 24px
+               @media $beforePhone
+                  margin-bottom: 16px
+               img
+                  width 100%
+         &--small
+            width 54%
+            //flex 0 0 64%
+            //max-width 64%
+            padding 0 20px
+            @media $phone
+               padding 0 10px
+            @media $beforePhone
+               width 100%
+               padding 0 20px
+            .home-news-block-inner
+               display flex
+            .home-news-block +.home-news-block
+               margin-top: 24px
+            .home-news-block__img
+               margin-right: 30px
+               width 39.5%
+               img
+                  width 100%
+            .home-news-block__info
+               width 60%
+            .home-news-block__text
+               @media $desktop
+                  font-size 21px
+                  line-height 24.5px
+               @media $phone
+                  font-size 18px
+                  line-height 22px
+            .home-news-block-inner
+               padding-bottom: 24px
+               @media $beforePhone
+                  padding-bottom: 24px
+      //-----video-----//
+   &-video
+      background $light
+      padding 0 0 100px
+      //border-radius 0 200px 0 0
+      &__title
+         display flex
+         align-items center
+         justify-content space-between
+      .video-news
+         position relative
+      .title__link-more
+         bottom -44px
+   &-news
+      &__title-wrap
+         margin 100px 0 50px
+         @media $desktop
+            margin 80px 0 40px
+         @media $beforePhone
+            margin 60px 0 40px
+
+
+      //-----bottom-----//
+   &-bottom
+      background $alice
+      padding 100px 0
+      @media $beforeTablet
+         padding 80px 0
+      @media $beforePhone
+         padding 60px 0
+      &__title
+         margin-left: 11px
+   &-partners
+      &__list
+         display flex
+         align-items center
+         justify-content space-between
+         margin: 40px -15px 0
+         @media $minTablet
+            flex-wrap wrap
+            margin: 15px -15px 0
+      &__item
+         flex 0 0 12.5%
+         max-width 12.5%
+         transition 0.3s
+         padding 0 15px
+         text-align center
+         @media $minTablet
+            flex 0 0 25%
+            max-width 25%
+            padding 25px 15px
+         @media $bigPhone
+            flex 0 0 50%
+            max-width 50%
+            padding 25px 30px
+         img
+            filter grayscale(100%)
+            transition 0.3s
+            max-width 100px
+            @media $beforeTablet
+               max-width 100%
+         &:hover img
+            filter grayscale(0%)
+
+   //----------tournament------------//
+   &-tournament
+      background $alice
+      display flex
+      position relative
+      align-items stretch
+      .title__link-more
+         position absolute
+         right 100px
+         top 122px
+         @media $desktop
+            right 70px
+         @media $afterDesktop
+            top 90px
+         @media $tablet
+            right 40px
+         @media $bigPhone
+            right 25px
+            top 70px
+         @media $beforeBigPhone
+            top auto
+            bottom 60px
+            right 50%
+            transform translateX(50%)
+         @media $phoneS
+            left 0
+            text-align center
+      @media $afterDesktop
+         flex-wrap wrap
+      &__title
+         display flex
+         align-items stretch
+         justify-content space-between
+      &__left
+         background $blueAlice
+         flex 0 0 40%
+         max-width 40%
+         padding 100px 40px 76px 100px
+         @media $desktop
+            padding-left: 70px
+            padding-right: 70px
+         @media $phone
+            padding 80px 40px
+         @media $bigPhone
+            padding-left: 25px
+            padding-right: 25px
+            padding 60px 25px
+         @media $phoneS
+            padding-left: 20px
+            padding-right: 20px
+
+         @media $afterDesktop
+            flex 0 0 100%
+            max-width 100%
+      &__right
+         background $alice
+         flex 0 0 60%
+         max-width 60%
+         height 100%
+         padding 200px 100px 100px 40px
+         @media $afterDesktop
+            flex 0 0 100%
+            max-width 100%
+            padding 40px 80px 80px
+            @media $tablet
+               padding 40px 40px 80px
+            @media $bigPhone
+               padding 40px 25px 60px
+            @media $beforeBigPhone
+               padding 40px 20px 110px
+
+
+      &-left
+         &__box
+            @media $afterDesktop
+               display flex
+               margin-top: 50px
+            @media $tablet
+               flex-direction column
+         .title
+            margin-left: 10px
+         &__inner
+            border-bottom solid 1px $grayLight
+            padding-bottom: 24px
+         &__img
+            margin 36px 0 24px
+            border-radius 40px 0 40px 0
+            overflow hidden
+            img
+               border-radius 40px 0 40px 0
+            @media $afterDesktop
+               margin 0 24px 0 0
+            @media $tablet
+               margin 20px 0
+         &__notice
+            color $white
+            background $red
+            font-size 18px
+            font-weight: 700
+            display inline-flex
+            padding 12px 21px
+            margin-bottom: 21px
+            position relative
+            z-index: 1
+            &:after
+               content ''
+               width 100%
+               height 100%
+               background $red
+               position absolute
+               right -15px
+               top 0
+               display block
+               transform skew(-20deg)
+               border-radius 0 0 8px
+               z-index -1
+         &__info
+            display flex
+            justify-content space-between
+            align-items center
+            font-size 21px
+            color $black
+            margin-bottom: 24px
+            @media $bigDesktop
+               font-size 18px
+            @media $bigPhone
+               font-size 16px
+            @media $beforeBigPhone
+               flex-direction column
+               justify-content flex-start
+               align-items flex-start
+         &__date
+            font-size 21px
+            @media $bigDesktop
+               font-size 18px
+            @media $bigPhone
+               font-size 16px
+         &__text
+            font-size 32px
+            font-weight: 700
+            line-height 39px
+            @media $phone
+               font-size 28px
+               line-height 32px
+            @media $bigPhone
+               font-size 24px
+               line-height 29px
+      &-right
+         &__title
+            font-size 32px
+            font-weight: 700
+
+//--------slider------//
+.mCSB_horizontal.mCSB_inside > .mCSB_container
+   display flex
+   align-items center
+   justify-content space-between
+   margin-bottom: 48px
+   margin-top: 40px;
+//.container
+//   height 400px
+.home-slider-list__item
+   flex 0 0 300px
+   max-width 300px
+   margin-right: 40px
+   border-bottom solid 1px $grayLight
+   padding-bottom: 24px
+   @media $desktop
+      max-width 215px
+      flex 0 0 215px
+      margin-right: 16px
+      padding-bottom: 20px
+   @media $afterDesktop
+      flex 0 0 300px
+      max-width 300px
+      margin-right: 40px
+      padding-bottom: 24px
+   @media $phone
+      max-width 215px
+      flex 0 0 215px
+      margin-right: 16px
+   @media $bigPhone
+      max-width 210px
+      flex 0 0 215px
+      margin-right: 16px
+   @media $phoneS
+      max-width 130px
+      flex 0 0 215px
+      margin-right: 16px
+      padding-bottom: 16px
+   &-img
+      border-radius 40px 0 40px 0
+      overflow hidden
+      img
+         border-radius 40px 0 40px 0
+   &-date
+      font-size 18px
+      margin 24px 0
+      @media $desktop
+         margin 20px 0
+      @media $bigPhone
+         font-size 14px
+      @media $phoneS
+         font-size 12px
+   &-text
+      font-size 21px
+      line-height 25px
+      font-weight: 700
+      margin-bottom: 24px
+      @media $desktop
+         margin-bottom: 20px
+      @media $afterDesktop
+         margin-bottom: 24px
+      @media $afterBigPhone
+         margin-bottom: 16px
+      @media $phoneS
+         font-size 16px
+         line-height 19px

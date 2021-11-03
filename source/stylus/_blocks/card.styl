@@ -1,0 +1,58 @@
+.card
+   &-block
+      display flex
+      align-items center
+      justify-content space-between
+      margin 0 -20px
+      @media $beforeTablet
+         flex-wrap wrap
+         justify-content flex-start
+      @media $beforePhone
+         margin 0
+      a
+         color $black
+   &__item
+      display flex
+      flex 0 0 33.333%
+      max-width 33.333%
+      padding 0 20px
+      @media $beforeTablet
+         flex 0 0 50%
+         max-width 50%
+         margin 20px 0
+         &:first-child
+            flex 1 0 100%
+            max-width 100%
+      @media $beforePhone
+         flex 0 0 100%
+         max-width 100%
+         padding 0
+
+
+   &__inner,&__link
+      border-bottom solid 1px $grayLight
+      padding-bottom: 32px
+      @media $beforePhone
+         flex-grow 1
+      @media $phoneS
+         padding-bottom: 24px
+   &__img
+      margin-bottom: 24px
+      @media $beforeTablet
+         display flex
+         flex-grow 1
+         img
+            width 100%
+   &__date
+      font-size 14px
+      margin-bottom: 16px
+   &__text
+      font-size 24px
+      font-weight: 700
+      line-height 29px
+      margin-bottom: 16px
+      @media $phoneS
+         font-size 21px
+         line-height 25px
+   &__location
+      font-size 14px

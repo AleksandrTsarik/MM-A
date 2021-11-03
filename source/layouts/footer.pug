@@ -1,0 +1,16 @@
+footer.footer
+    .content-wrapper
+        .footer__inner
+            .footer__title Контакты
+            .footer__content
+                .footer__list
+                    each item in ['По вопросам покупки трансляций','По вопросам сотрудничества','По вопросам работы плеера']
+                        a(href="#").footer__item !{item}
+                .footer__network
+                    .network.network--black
+                        each item in ['Vk','Yt','Fb','In',]
+                            .network__item
+                                a(href="#")
+                                    .skew.network__item-link
+                                        .skew__inner !{item}
+            .footer__row 2021, ООО М-1 Глобал Медиа

@@ -1,0 +1,30 @@
+extends layouts/default
+
+block pageVar
+    -pageTitle = 'список бойцов';
+block content
+    .page-container
+        .top__bg.fl-top--position
+            .content-wrapper
+                .fl-top.top-bg--padding
+                    .fl-top__title Найти бойца
+                    .fl-top-searche
+                        .fl-top-searche-input
+                            label.fl-top-searche__label.skew
+                                input.fl-top-searche__input.skew__inner(type="text" placeholder="Имя бойца")
+                            label.fl-top-searche__label.skew
+                                input.fl-top-searche__input.skew__inner(type="text" placeholder="Страна")
+                        .fl-top-searche-btn
+                            button.skew(type="submit")
+                                div.skew__inner поиск
+        .content-wrapper
+            .fl-list
+                .fl-list__head.fl-list-head
+                    .fl-list-head__name Имя бойца
+                    .fl-list-head__country Страна
+                    .fl-list-head__record Рекорд в Горилла ММА Серии
+                include _blocks/fightersList
+                .banner-commercial рекламный баннер
+                include _blocks/fightersList
+                .banner-offer.banner-offer--pos
+                    img(src="/f/img/bottom-bg.png", alt="")

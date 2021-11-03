@@ -1,0 +1,28 @@
+-
+    var foto =
+        [
+            {
+                image: '/f/img/foto/item1.jpg',
+                text: 'Горилла ММА Серия-34: Сердце и кулак Башкортостана – Результаты',
+                date: '14 июня 2021',
+            },
+            {
+                image: '/f/img/foto/item2.jpg',
+                text: 'Горилла ММА Серия-34: Церемония взвешивания состоится 11 июня',
+                date: '9 июня 2021',
+            },
+            {
+                image: '/f/img/foto/item3.jpg',
+                text: 'Мини-юбилей прошел на пять баллов: Горилла ММА Серия провела 35-й турнир',
+                date: '9 июня 2021 ',
+            },
+        ]
+.fotocard__list
+    each item in foto
+        .fotocard__item
+            .fotocard__inner
+                .fotocard__img
+                    img(src=""+item.image, alt="")
+                .fotocard__info
+                    .fotocard__date !{item.date}
+                    .fotocard__text !{item.text}

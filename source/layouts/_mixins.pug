@@ -1,0 +1,93 @@
+mixin link(href, name)
+    a(class!=attributes.class href=href)= name
+
+
+mixin newsCard(param)
+    .newscard-block__item
+        .newscard-block__inner
+            .newscard-block__img
+                img(src="" + param.image)
+            .newscard-block__info
+                .newscard-block__info-date !{param.date}
+                .newscard-block__info-text !{param.text}
+
+mixin videoCard(param)
+    .videocard-block__item
+        a(href=""+param.url)
+           .videocard-block__img.br-40
+               img(src=""+param.image, alt="")
+           .videocard-block__date !{param.date}
+           .videocard-block__text !{param.text}
+
+mixin fotoCard(param)
+    .fotocard__item
+        .fotocard__inner
+            .fotocard__img
+                img(src=""+param.image, alt="")
+            .fotocard__date !{param.date}
+            .fotocard__text !{param.text}
+
+mixin nextTurnir(param)
+    .card__item
+        if(param.url)
+            a(href=""+param.url).card__link
+                .card__inner
+                    .card__img.br-40
+                        img(src=""+param.image, alt="")
+                    .card__date !{param.date}
+                    .card__text !{param.text}
+                    .card__location !{param.location}
+        else
+            .card__inner
+                .card__img.br-40
+                    img(src="" + param.image, alt="")
+                .card__date !{param.date}
+                .card__text !{param.text}
+                .card__location !{param.location}
+
+
+mixin mixinFighter(param, param2)
+    .t-fight__img
+        img(src="" + param.fighterImg, alt="")
+    .t-fight__info
+        .t-fight__country
+            .t-fight__country-img
+                div
+                    img(src="" + param.flagCountry, alt="")
+            .t-fight__country-name !{param.fighterCountry}
+        .t-fight__fighter-name !{param.fighterName}
+        if (param2.conditionBattle == 'begin')
+            .t-fight__statistics.skew
+                .skew__inner !{param.fighterStatistics}
+        else
+            .skew.t-fight-status(class="" + (param.fighterStatus ==
+            'Победа'?'t-fight-status__winner':'t-fight-status__loser'))
+                .skew__inner !{param.fighterStatus}
+
+
+
+mixin mixinFighterList(fighters)
+    .t-fight__list
+        each item,index in fighters
+            .t-fight__item
+                .t-fight__left
+                    +mixinFighter(item.fighter1, item.mid)
+                .t-fight__mid
+                    if item.mid.conditionBattle == 'begin'
+                        .t-fight__weight !{item.mid.weight}
+                        .t-fight__enemy.skew.t-fight--border-red
+                            .skew__inner !{item.mid.enemy}
+                    else
+                        .t-fight__ko.skew.t-fight--border-red
+                            .skew__inner !{item.mid.ko}
+
+                        .t-fight__time-round
+                            .t-fight__round !{item.mid.round}
+                            .t-fight__time !{item.mid.time}
+                    if item.mid.fightLabel
+                        .t-fight__item--batle !{item.mid.fightLabel}
+                    .t-fight__link
+                        a(href="#") !{item.mid.statistics}
+                .t-fight__right
+                    +mixinFighter(item.fighter2, item.mid)
+

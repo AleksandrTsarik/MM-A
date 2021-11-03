@@ -1,0 +1,51 @@
+.video-block
+   display flex
+   flex-wrap wrap
+   margin 0 -25px
+   font-family: $Inter
+   @media $phone
+      flex-wrap wrap
+   a
+      display block
+      color $black
+.videocard-block
+   &__item
+      flex 0 0 33.333%
+      max-width 33.333%
+      padding 0 25px
+      margin 25px 0
+      transition 0.3s
+      @media $tablet
+         flex 0 0 50%
+         max-width 50%
+      @media $phone
+         margin 20px 0
+      @media $beforePhone
+         flex 0 0 100%
+         max-width 100%
+         margin 16px 0
+
+      &:hover .videocard-block__img
+         filter: drop-shadow(0 0 5px rgba(black, 0.8))
+         @media $afterDesktop
+            box-shadow none
+   &__img
+      transition 0.3s
+      //border-radius 85px 0 85px 0
+      img
+         width 100%
+         //border-radius 80px 0 80px 0
+         @media $afterDesktop
+            border-radius 40px 0 40px 0
+   &__date
+      font-size 14px
+      margin 24px 0 15px 0
+   &__text
+      font-size 24px
+      font-weight: 700
+      border-bottom solid 1px $grayLight
+      padding-bottom: 30px
+      @media $phone
+         font-size 21px
+         line-height 25px
+         padding-bottom: 40px

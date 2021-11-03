@@ -1,0 +1,63 @@
+-
+    var fighterList = [
+        {
+            image: '/f/img/fighter/item.png',
+            name: 'Александр Волков',
+            country: 'Россия',
+            record: '41/33/85'
+        },
+        {
+            image: '/f/img/fighter/item.png',
+            name: 'Александр Волков',
+            country: 'Россия',
+            record: '41/33/85'
+        },
+        {
+            image: '/f/img/fighter/item.png',
+            name: 'Александр Волков',
+            country: 'Россия',
+            record: '41/33/85'
+        },
+        {
+            image: '/f/img/fighter/item.png',
+            name: 'Александр Волков',
+            country: 'Россия',
+            record: '41/33/85'
+        },
+        {
+            image: '/f/img/fighter/item.png',
+            name: 'Александр Волков',
+            country: 'Россия',
+            record: '41/33/85'
+        },
+        {
+            image: '/f/img/fighter/item.png',
+            name: 'Александр Волков',
+            country: 'Россия',
+            record: '41/33/85'
+        },
+        {
+            image: '/f/img/fighter/item.png',
+            name: 'Александр Волков',
+            country: 'Россия',
+            record: '41/33/85'
+        },
+        {
+            image: '/f/img/fighter/item.png',
+            name: 'Александр Волков',
+            country: 'Россия',
+            record: '41/33/85'
+        },
+        ]
+.fighter-list
+    each item in fighterList
+        .f-item
+            .f-item__fighter
+                .f-item__img
+                    img(src="" + item.image, alt="")
+                .f-item__name !{item.name}
+            .f-item__country !{item.country}
+            .f-item__record !{item.record}
+            .f-item__btn
+                button.skew(type="submit")
+                    div.skew__inner Статистика

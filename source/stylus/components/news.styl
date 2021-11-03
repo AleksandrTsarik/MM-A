@@ -1,0 +1,259 @@
+.news-head
+   display flex
+   align-items stretch
+   @media $beforePhone
+      flex-wrap wrap
+   &__img
+      flex 0 0 50%
+      max-width 50%
+      margin-right: 50px
+      @media $desktop
+         margin-right: 30px
+      @media $phone
+         margin-right: 20px
+      @media $beforePhone
+         flex 0 0 100%
+         max-width 100%
+         padding-bottom: 64%
+   &__info
+      flex 0 0 50%
+      max-width 50%
+      padding 120px 80px 120px
+      @media $desktop
+         padding 100px 80px 100px 30px
+      @media $phone
+         padding 48px 40px 58px 20px
+      @media $beforePhone
+         flex 0 0 100%
+         max-width 100%
+         padding 48px 40px 58px 40px
+   &__date
+      font-size 21px
+      margin-bottom: 24px
+      @media $tablet
+         font-size 14px
+         margin-bottom: 16px
+      @media $beforePhone
+         font-size 21px
+         margin-bottom: 24px
+      @media $bigPhone
+         font-size 14px
+         margin-bottom: 16px
+   &__text
+      font-size 42px
+      font-weight: 700
+      line-height 51px
+      margin-bottom: 58px
+      @media $beforeTablet
+         font-size 36px
+         line-height 41px
+      @media $tablet
+         font-size 24px
+         line-height 29px
+         margin-bottom: 24px
+      @media $beforePhone
+         font-size 36px
+         line-height 41px
+      @media $bigPhone
+         font-size 24px
+         line-height 29px
+      @media $beforeBigPhone
+         font-size 21px
+         line-height 25px
+   &__more
+      margin-left: 10px
+      .skew
+         background $red
+         color $white
+         border-radius: 8px 0 8px 0
+         font-size 18px
+         text-transform uppercase
+         transition 0.3s
+         &:hover
+            box-shadow 0 0  10px rgba($black, 0.7) inset
+         &__inner
+            padding 11px 39px
+         @media $beforeBigPhone
+            font-size 10px
+.news-block
+
+   .title
+      margin-left: 10px
+   &__head
+      display flex
+      justify-content space-between
+      align-items center
+      margin-top 80px
+      margin-bottom 40px
+
+   &__label
+      &-inp
+         border: solid 1px $grayClear
+         border-radius: 8px 0 0 0
+      &-btn
+         border: solid 1px $red
+         margin-left -5px
+         background: $red
+         width 140px
+         text-align center
+         border-radius: 0 0 8px 0
+         div
+            color: $white
+            padding: 13px 0 11px 0
+         &:hover
+            box-shadow 0 0  10px rgba($black, 0.7) inset
+   &__input
+      padding: 12px 10px 12px 55px
+      font-size: 16px
+      width: 340px
+      position: relative
+      &-btnma
+         color: $white
+         padding: 13px 48px
+         font-size: 16px
+   &__list
+      display flex
+      margin 0 -25px
+      @media $beforeTablet
+         flex-wrap wrap
+   &__search
+      display flex
+      align-items stretch
+      @media $beforePhone
+         display none
+      &--mobile
+         display none
+         @media $beforePhone
+            display block
+         .news-block__label
+            display none
+         .news-block__search-btn
+            border-radius 8px 0 8px 0
+            width 70px
+            background $white
+            border: solid 1px $grayClear
+            cursor pointer
+            text-align center
+            padding: 9px 0 10px 0
+            &:hover
+               box-shadow 0 0 3px rgba(black, 0.2)
+            div
+               padding 0
+
+         &.is-active .news-block__label
+            display block
+            position fixed
+            right 0
+            left 0
+            top 0
+            z-index 15
+            background $white
+            border-radius 0
+            border solid 1px rgba(black, 0.5)
+            box-shadow 0 3px 5px rgba(black, 0.3)
+            input
+               width 100%
+               padding 10px
+
+.input-ico-lens
+   background-image: url('../img/lens.svg')
+   background-position: 50% 50%
+   background-repeat: no-repeat
+   background-size: cover
+   position: absolute
+   left: 20px
+   top: 50%
+   transform: translateY(-50%) 
+   width: 16px
+   height: 16px
+   cursor: auto
+
+
+.news-info
+   &__img
+      img
+         background $grayLight
+         border-radius 25px 0 25px 0
+   &__top
+      display flex
+      justify-content space-between
+      @media $afterDesktop
+         flex-wrap wrap
+   &__right
+      flex 0 0 24%
+      max-width 24%
+      padding-left: 20px
+      @media $afterDesktop
+         flex 0 0 100%
+         max-width: 100%
+         padding-left: 0
+   &__left
+      flex 0 0 76%
+      max-width 76%
+      padding-right: 10px
+      @media $afterDesktop
+         flex 0 0 100%
+         max-width 100%
+   &__list
+      display flex
+      justify-content space-between
+      flex-wrap wrap
+      @media $afterDesktop
+         margin 0 -20px
+   &-item
+      flex 0 0 50%
+      max-width 50%
+      padding 20px
+      @media $beforePhone
+         flex  0 0 100%
+         max-width 100%
+
+      &__inner
+         display flex
+         //align-items center
+         padding-bottom: 25px
+         border-bottom solid 1px $grayLight
+         padding-right: 20px
+      &__date
+         font-size 14px
+         line-height 17px
+         padding-bottom: 24px
+         @media $phone
+            padding-bottom: 16px
+      &__text
+         font-size 21px
+         font-weight: 700
+         line-height 25px
+         @media $desktop
+            font-size 18px
+            line-height 21px
+         @media $phone
+            font-size 16px
+            line-height: 19px
+         @media $bigPhone
+            font-size 18px
+            line-height 21px
+
+
+   &__text
+      flex 0 0 60%
+      max-width 60%
+
+   &__img
+      border-radius 40px 0 40px
+      overflow hidden
+      flex 0 0 40%
+      max-width 40%
+      margin-right: 25px
+   &__more
+      text-align center
+      margin-top: 80px
+
+.top__bg-img
+   img
+      margin-left -100px
+      margin-right: 100px
+      border-radius 0 0 200px 0
+top-bg__news-page
+   img
+      border-radius: 0 0 200px 0

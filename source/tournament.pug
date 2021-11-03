@@ -1,0 +1,123 @@
+extends layouts/default
+
+block pageVar
+    -pageTitle = 'Турнир';
+
+block content
+    -
+        var cardFight =
+                [
+                    {
+                        image: '/f/img/tournament/item.png',
+                        date: '14 июня 2021',
+                        text: 'Горилла ММА Серия-35: Время новых героев',
+                        location: 'Бачка-Паланка, Россия'
+                    },
+                    {
+                        image: '/f/img/tournament/item.png',
+                        date: '14 июня 2021',
+                        text: 'Горилла ММА Серия-35: Время новых героев',
+                        location: 'Бачка-Паланка, Россия'
+                    },
+                    {
+                        image: '/f/img/tournament/item.png',
+                        date: '14 июня 2021',
+                        text: 'Горилла ММА Серия-35: Время новых героев',
+                        location: 'Бачка-Паланка, Россия',
+                        //url: '#'
+                    },
+                ]
+        var pastTournaments =
+                [
+                    {
+                        url: '#',
+                        date: '14 июня 2021',
+                        text: 'Горилла ММА Серия-34: Сердце и кулак Башкортостана',
+                        location: 'Уфа, Россия',
+                    },
+                    {
+                        url: '#',
+                        date: '14 июня 2021',
+                        text: 'Горилла ММА Серия-34: Сердце и кулак Башкортостана',
+                        location: 'Уфа, Россия',
+                    },
+                    {
+                        url: '#',
+                        date: '14 июня 2021',
+                        text: 'Горилла ММА Серия-34: Сердце и кулак Башкортостана',
+                        location: 'Уфа, Россия',
+                    },
+                    {
+                        url: '#',
+                        date: '14 июня 2021',
+                        text: 'Горилла ММА Серия-34: Сердце и кулак Башкортостана',
+                        location: 'Уфа, Россия',
+                    },
+                    {
+                        url: '#',
+                        date: '14 июня 2021',
+                        text: 'Горилла ММА Серия-34: Сердце и кулак Башкортостана',
+                        location: 'Уфа, Россия',
+                    },
+                    {
+                        url: '#',
+                        date: '14 июня 2021',
+                        text: 'Горилла ММА Серия-34: Сердце и кулак Башкортостана',
+                        location: 'Уфа, Россия',
+                    },
+                ]
+    .page-container
+        .top__bg
+            .tournament-head
+                .tournament-head__bg.br--rb(style="background-image: url('../f/img/tournament/bg.jpg'); background-size: cover;" +
+                "background-position: 48% 50%")
+                    //img(src="/f/img/turnament/bg.jpg", alt="")
+                .top-bg--padding.tournament-head__info
+                    .tournament-head__fight-now Предстоящий турнир
+                    .tournament-head__date Суббота, 24 Июля, 19:00
+                    .tournament-head__title
+                        | Горилла ММА Серия — 37
+                    .tournament-head__location Санкт-Петербург, Россия
+                    .tournament-head__box-btn
+                        button.skew.tournament-head__box-btn--red
+                            .skew__inner купить трансляцию
+                        button.skew.tournament-head__box-btn--black
+                            .skew__inner купить билет
+                    .tournament-head__link
+                        a(href="#") Подробнее
+        .content-wrapper
+            .tournament-body
+                .tournament-body__next-fight.tournament-next-fight
+                    h2.skew.title.tournament-next-fight__title
+                        .skew__inner БУДУЩИЕ ТУРНИРЫ
+                    .card-block.tournament-body__card
+                        each item in cardFight
+                            +nextTurnir(item)
+                    .tournament-next-fight__more
+                        a(href="#").more Показать ещё
+            .banner-commercial рекламный баннер
+        .tournament-past.top__bg
+            .content-wrapper.tournament-past__wrap
+                .tournament-past__head
+                    h2.skew.title.tournament-past__title
+                        .skew__inner ПРОШЕДШИЕ ТУРНИРЫ
+                    .tournament-past__choice.js-active
+                        a(href="#").tournament-past__choice-link.is-active 2021
+                        a(href="#").tournament-past__choice-link 2020
+                        a(href="#").tournament-past__choice-link Показать все
+                .tournament-past__body
+                    .tournament-past__list
+                        each item in pastTournaments
+                            .tournament-past__item
+                                a(href="" + item.url).tournament-past__inner
+                                    .tournament-past__date !{item.date}
+                                    .tournament-past__text !{item.text}
+                                    .tournament-past__loc !{item.location}
+
+                    .tournament-past__more
+                        a(href="#").more Показать ещё
+        .content-wrapper
+            .banner-offer.banner-offer--pos
+                img(src="/f/img/bottom-bg.png", alt="")
+
+

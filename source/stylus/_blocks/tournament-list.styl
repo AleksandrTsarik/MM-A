@@ -1,0 +1,262 @@
+.t-fight
+   &__item
+      display flex
+      align-items center
+      justify-content space-between
+      border solid 1px $grayLight
+      margin 20px 0
+      padding 34px 48px
+      position relative
+      @media $desktop
+         padding 34px 30px
+      @media $afterBigPhone
+         flex-direction column
+         align-items flex-start
+      @media $beforeBigPhone
+         padding 24px
+      @media $phoneS
+         padding 30px 16px 73px
+      &:nth-child(even)
+         background $light
+      &--batle
+         background $red
+         color $white
+         position absolute
+         left 0
+         top -25px
+         font-size 18px
+         font-weight: 700
+         padding 0 20px
+         height 50px
+         line-height 50px
+         z-index 5
+         &:after
+            content ''
+            width 100%
+            height 100%
+            display block
+            position absolute
+            right -15px
+            top 0
+            transform skew(-20deg)
+            border-radius 8px 0
+            background $red
+            z-index -1
+   &__img
+      @media $afterBigPhone
+         display block
+         width 100%
+         border-radius 50%
+         overflow hidden
+         width 120px
+         height 120px
+         @media $beforePhone
+            width 80px
+            height 80px
+         @media $bigPhone
+            width 60px
+            height 60px
+
+   &__fighter
+      &-name
+         font-size 32px
+         line-height 39px
+         font-weight 700
+         margin-bottom: 16px
+         @media $desktop
+            font-size 24px
+            line-height 29px
+         @media $beforePhone
+            font-size 21px
+            line-height 25px
+         @media $beforeBigPhone
+            margin-bottom: 0
+   &__statistics
+      border solid 1px
+      width 106px
+      text-align center
+      font-size 14px
+      height 30px
+      line-height 29px
+      //padding 3px 0
+      border-radius 6px 0 6px 0
+   &-status
+      color $white
+      border solid 1px transparent
+      border-radius 6px 0 6px 0
+      font-size 14px
+      padding 4px 0
+      text-transform uppercase
+      width 120px
+      text-align center
+      @media $afterBigPhone
+         position absolute
+         top 0
+         right 0
+
+      &__loser
+         background $red
+      &__winner
+         background $lightGreen
+   &__right
+      display flex
+      align-items center
+      flex-direction row-reverse
+      position relative
+      @media $tablet
+         flex-direction column
+         margin-left auto
+      @media $afterBigPhone
+         flex-direction row
+         margin-left: 0
+         margin-right auto
+         width 100%
+         .t-fight-status
+            position absolute
+            top 0
+            right 0
+      @media $beforeBigPhone
+         flex-wrap wrap
+      .t-fight__info
+         align-items flex-end
+      .t-fight__img
+         margin-left 40px
+         @media $tablet
+            margin-left: auto
+         @media $afterBigPhone
+            margin-left 0
+      .t-fight__fighter-name
+         text-align right
+   &__left
+      display flex
+      align-items center
+      @media $tablet
+         flex-direction column
+         margin-right auto
+      @media $afterBigPhone
+         flex-direction row
+         position relative
+         margin-right: 0
+         width 100%
+      @media $beforeBigPhone
+         flex-wrap wrap
+      .t-fight__img
+         margin-right: 40px
+         @media $tablet
+            margin-left 0
+            margin-right auto
+         @media $afterBigPhone
+            margin-right: 24px
+   &__country
+      display flex
+      align-items center
+      margin-bottom: 15px
+      @media $afterBigPhone
+         flex 0 0 50%
+         max-width 50%
+      &-img
+         width 30px
+         height 30px
+         margin-right: 12px
+         border-radius 7px
+         overflow hidden
+      &-name
+         font-size 14px
+      &-right
+         justify-content flex-end
+         @media $afterBigPhone
+            position relative
+   &__info
+      display flex
+      flex-direction column
+      @media $afterBigPhone
+         flex-direction row
+         flex-wrap wrap
+         justify-content space-between
+         position relative
+         width 100%
+   &--border-red
+      color $red
+      border solid 1px $red
+      border-radius 12px 0 12px 0
+      font-size 18px
+      font-family: $Prosto
+      padding 6px 14px
+   &__ko
+      margin-bottom: 16px
+      @media $afterBigPhone
+         order 2
+         margin-bottom: 0
+      @media $phoneS
+         order 1
+         margin-right: 24px
+   &__weight
+      font-size 21px
+   &__enemy
+      margin 24px 0
+   &__mid
+      text-align center
+      @media $tablet
+         padding 0 25px
+      @media $afterBigPhone
+         display flex
+         align-items center
+         justify-content space-between
+         padding 0
+         width 100%
+         margin 24px 0
+      @media $phoneS
+         justify-content flex-start
+   &__round
+      font-size 21px
+      @media $beforePhone
+         font-size 18px
+   &__time
+      font-size 21px
+      margin-bottom: 24px
+      @media $beforePhone
+         font-size 18px
+         margin-bottom: 12px
+      @media $afterBigPhone
+         margin-bottom: 0
+      @media $phoneS
+         order 2
+   &__time-round
+      @media $afterBigPhone
+         order 1
+   &__link
+      @media $afterBigPhone
+         order 3
+      @media $phoneS
+         position absolute
+         bottom 32px
+         left 50%
+         transform translateX(-50%)
+      a
+         color $black
+         text-decoration underline
+         font-size 21px
+         position relative
+         transition 0.3s
+         @media $beforePhone
+            font-size 18px
+         @media $afterBigPhone
+            margin-right: 0.7em
+            margin-left: -0.7em
+         &:hover
+            text-decoration none
+            text-shadow 0 0 5px rgba($black,0.3)
+         &:after
+            content ''
+            width 0.5em
+            height 0.5em
+            display block
+            border-bottom solid 1px
+            border-right solid 1px
+            transform rotate(-45deg)
+            position absolute
+            right -0.7em
+            top 0.45em
+
+
+

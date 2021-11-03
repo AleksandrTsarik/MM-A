@@ -1,0 +1,394 @@
+.header
+   position relative
+   background $white
+
+   &__top
+      background $alice
+      font-family: $Inter
+      border-radius 80px 0 80px 0
+      @media $bigDesktop
+         border-radius 60px 0 60px 0
+      @media $desktop
+         border-radius 40px 0 40px 0
+      @media $tablet
+         border-radius 20px 0 20px 0
+      @media $phoneS
+         border-radius 10px 0 10px 0
+      &-inner
+         background $black
+         border-radius 100px 0 80px 0
+         display flex
+         align-items center
+         @media $bigDesktop
+            border-radius 80px 0 60px 0
+         @media $afterDesktop
+            border-radius 60px 0 40px 0
+         @media $tablet
+            border-radius 40px 0 20px 0
+         @media screen and (max-width: 575px)
+            height 60px
+         @media $phoneS
+            border-radius 30px 0 10px 0
+            height 40px
+
+   &-top
+      &__link
+         a
+            display block
+            border-radius  8px 0 8px 0
+            font-weight: 700
+            border solid 1px transparent
+            color $black
+            background $white
+            transition 0.3s
+            font-size 18px
+            text-transform uppercase
+            padding 20px 80px
+            @media $desktop
+               padding 10px 63px
+            @media $afterDesktop
+               padding 10px 54px
+            @media $phone
+               padding 6px 37px
+            @media $tablet
+               font-size 10px
+               border-radius  4px 0 4px 0
+            @media screen and (max-width: 575px)
+               padding 3px 21px
+               font-size 6.2px
+            @media $phoneS
+               font-size 4.2px
+            &:hover
+               background $black
+               color $white
+               border-color $white
+   &-top
+      color white
+      &__img
+         flex 0 0 38%
+         max-width 38%
+         //margin-left: -10px
+         margin-right: 65px
+         margin-bottom: 1px
+         margin-left: -1px
+         overflow hidden
+         @media $bigDesktop
+            margin-right: 40px
+         @media $tablet
+            margin-right: 30px
+         @media $bigPhone
+            margin-right: 15px
+         @media screen and (max-width: 575px)
+            height 60px
+         @media $phoneS
+            height 40px
+         img
+            border-radius 80px 0 80px 0
+            width 100%
+            @media $bigDesktop
+               border-radius 60px 0 60px 0
+            @media $afterDesktop
+               border-radius 40px 0 40px 0
+            @media $tablet
+               border-radius 20px 0 20px 0
+            @media $afterBigPhone
+               height 100%
+            @media $phoneS
+               border-radius 10px 0 10px 0
+
+      &__info
+         &-title
+            color $lightGreen
+            font-weight: 400
+            font-size 43px
+            line-height 50px
+            font-family: $Prosto
+            @media $bigDesktop
+               font-size: 28px
+               line-height: 36px
+            @media $afterDesktop
+               font-size 24px
+               line-height normal
+            @media $tablet
+               font-size 15px
+            @media $beforePhone
+               font-size 10px
+            @media $beforePhone
+               font-size 9px
+            @media $phoneS
+               font-size 6px
+         &-text
+            font-size: 32px
+            line-height: 35px
+            font-family: $Inter
+            @media $bigDesktop
+               font-size: 24px
+               line-height: 29px
+            @media $afterDesktop
+               font-size 18px
+               line-height normal
+            @media $minTablet
+               font-size 13px
+            @media $beforePhone
+               font-size  8px
+            @media $phoneS
+               font-size 5px
+      &__link
+         margin-left: auto
+         margin-right: 80px
+         @media $bigDesktop
+            margin-right: 40px
+         @media $phone
+            margin-right: 30px
+         @media $bigPhone
+            margin-right: 20px
+         @media $bigPhone
+            margin-right: 10px
+   &__wrapper
+      position relative
+   &__wrapper
+       border-radius: 80px 0 80px 0
+       background: $alice
+   &-text__row
+      color $white
+      font-size 18px
+      padding-top: 10px
+
+   &-bottom
+      background-color $black
+      margin-top: -1px
+      &__inner
+         padding 9px 0
+         display flex
+         align-items center
+         justify-content space-between
+      &-left
+         &__link
+
+            display block
+            transition 0.8s
+            &:hover .skew
+               box-shadow 0 0 5px rgba($white, 1)
+            .skew
+               border solid 1px $white
+               border-radius 8px 0 8px 0
+         &__block
+            display flex
+            align-items center
+         &__logo
+            background-color $white
+            transform skew(-20deg)
+            overflow hidden
+            border-radius 8px 0 0
+            display flex
+            align-items center
+            height 28px
+            width 50px
+            margin-left: -1px
+            &-inner
+               width: 0
+               height: 0
+               border-top: 5px solid transparent
+               border-left: 9px solid $black
+               border-bottom: 5px solid transparent
+               margin 0 auto
+         &__text
+            color $white
+            padding 0px 10px
+            font-size 12px
+            line-height 15px
+            background $black
+            transform skew(-20deg)
+            border-radius 0 0 8px 0
+            @media $phoneS
+               font-size 8px
+            &-inner
+               transform skew(20deg)
+               height 28px
+               align-items center
+               display flex
+      &__right
+         display flex
+         .network
+            margin-right: 40px
+            @media $beforePhone
+               display none
+.header-language
+   display flex
+   align-items center
+   &__item + &__item
+      margin-left: 20px
+   &__item
+      cursor pointer
+      color: $grey
+      display block
+      font-size 14px
+      height 100%
+   &__item.is-active
+      color $white
+      position relative
+      &:after
+         content ''
+         width 100%
+         height 3px
+         background red
+         position absolute
+         top -9px
+         left 0
+.header-strip
+   background $white
+
+   &__inner
+      display flex
+      align-items center
+   &__logo
+      margin-right: 40px
+      width 175px
+      transition 0.3s
+      &:hover
+         filter: drop-shadow(0 0 4px rgba(black, 0.3))
+      @media screen and (max-width: 1350px)
+         padding 15px 0
+
+   &__list
+      display flex
+      @media screen and (max-width: 1350px)
+         display block
+         box-shadow 0 7px 10px rgba(black, 0.2)
+      a
+         padding 20px 5px
+         display block
+         @media screen and (max-width: 1350px)
+            padding 10px 0 10px 70px
+            //border-bottom solid 1px rgba(0,0,0,.1)
+            //border-top solid 1px rgba(0,0,0,.1)
+
+   &__menu
+      @media screen and (max-width: 1350px)
+         display none
+         position absolute
+         top 100%
+         width 100%
+         left 0
+         background #fff
+         z-index 5
+   &__item,&__item--mobile
+      margin-right: 30px
+      transition 0.3s
+      position relative
+      white-space nowrap
+      @media $bigDesktop
+         margin-right: 20px
+      @media screen and (max-width: 1350px)
+         margin-right: 0
+         transition 0.3s
+         &:nth-child(odd)
+            background $light
+         &:hover
+            background $grayLight
+      a
+         color $black
+         opacity 0.5
+         transition 0.3s
+         font-size 16px
+         @media $bigDesktop
+            font-size 14px
+         &:hover
+            opacity 1
+            &::after
+               content ''
+               width 100%
+               height 3px
+               background $red
+               position absolute
+               transition 0.3s
+               top 0px
+               left 0
+               @media screen and (max-width: 1350px)
+                  display none
+      &.is-active
+         &::after
+            content ''
+            width 100%
+            height 3px
+            background $red
+            position absolute
+            top 0
+            left 0
+         a
+            opacity 1
+      &--mobile
+         display none
+         @media $beforeBigPhone
+            display block
+
+
+   &__reg
+      @media $beforeBigPhone
+         display none
+      a
+         color $white
+         background $red
+         border-radius 8px 0 8px 0
+         transition 0.3s
+         font-size 14px
+         line-height 17px
+         padding 4px 39px 5px
+         &:hover
+            box-shadow 0 0 10px rgba($black, 0.7) inset
+      .skew__inner
+         padding 4px 0 3px
+      &-block
+         margin-left: auto
+         display flex
+         align-items center
+.burger
+   height 20px
+   width 24px
+   display flex
+   flex-direction column
+   justify-content space-between
+   cursor pointer
+   margin-right: 24px
+   display none
+   transition 1s
+   @media screen and (max-width: 1350px)
+      display flex
+   @media $beforeBigPhone
+      margin-right: 0
+   div
+      width 24px
+      height 2px
+      background $black
+      position relative
+      border-radius 2px
+      transition 0.3s
+.header-strip__inner.is-active
+   transition 1s
+   .burger
+      position relative
+      div
+         &:nth-child(2)
+            //display none
+            opacity 0
+         &:nth-child(1)
+            transform rotate(45deg)
+            position absolute
+            top 10px
+            left 0
+            transition 0.5s
+         &:nth-child(3)
+            transform rotate(-45deg)
+            position absolute
+            top 10px
+            left 0
+            transition 0.5s
+.header-inner.is-fixed
+   .header-bottom-box
+      position fixed
+      z-index 15
+      right 0
+      left 0
+      top 0
+   .header-strip
+      box-shadow 0 3px 5px rgba(black, 0.2)

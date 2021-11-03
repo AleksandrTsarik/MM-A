@@ -1,0 +1,77 @@
+extends layouts/default
+
+block pageVar
+    -pageTitle = 'Видео';
+block content
+    -
+        var minVideo =
+                [
+                    {
+                      image: '/f/img/list/item-1.jpg',
+                      date: '14 июня 2021',
+                      text: 'Горилла ММА Серия — 34: Юнир Бикбаев (Россия) – Бекболот Кимсаньоев (Кыргызстан)',
+                      url: '#',
+                    },
+                    {
+                        image: '/f/img/list/item-2.jpg',
+                        date: '14 июня 2021',
+                        text: 'Прыжок в стиле Хабиба ???? Выбил капу ногой Темирхан Термиханов – Улугбек Осканов',
+                        url: '#',
+                    },
+                    {
+                        image: '/f/img/list/item-3.jpg',
+                        date: '14 июня 2021',
+                        text: 'Горилла ММА Серия-34: Сердце и кулак Башкортостана – Результаты',
+                        url: '#',
+                    },
+                ]
+    .page-container
+        .top__bg
+            .video-top
+                .video-top__img.br--rb(style="background-image: url('../f/img/video_bg.png'); background-size: cover;" +
+                "background-position: 48% 50%")
+                   // img(src="../f/img/video_bg.png", alt="")
+                .video-top__info.video-top-info
+                    .video-top-info__head
+                        .video-top-info__head-action.skew
+                            .skew__inner Актуальное видео
+                        .video-top-info__head-date 28 июня 2021
+                    .video-top-info__title
+                        | Мини-юбилей прошел на пять баллов: Горилла ММА Серия провела 35-й турнир
+                    .video-top-info__more
+                        a(href="#").skew
+                            .skew__inner
+                                | узнать больше
+
+        .content-wrapper
+            .video-news
+                .video-news__title.video-news__title-wrap
+                    h2.skew.title
+                        .skew__inner ВИДЕО
+                .video-news__inner
+                    .video-news__left.video-news-left
+                        a(href="#").video-news-left__item
+                            .video-news-left__video.br-40
+                                img(src="/f/img/big-video.png", alt="")
+                            .video-news-left__date
+                                | Суббота, 26 Июня, 19:00
+                            .video-news-left__text
+                                | Горилла ММА Серия — 34: Сергей Дяконов (Россия – Евгений Михалев (Россия)
+                    .video-news__right.video-news-right
+                        .video-news-right__list
+                            each item in minVideo
+                                a.video-news-right__item(href=""+item.url)
+                                    .video-news-right__img.br-40
+                                        img(src=""+item.image alt="")
+                                    .video-news-right__info
+                                        .video-news-right__date !{item.date}
+                                        .video-news-right__text !{item.text}
+
+            .banner-commercial рекламный баннер
+            .video-news__choice
+                include _blocks/video-list
+            .video-news__choice-more
+                a(href="#").more Показать ещё
+            .video-banner
+                .banner-offer.banner-offer--pos
+                    img(src="/f/img/bottom-bg.png", alt="")

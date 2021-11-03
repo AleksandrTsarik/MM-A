@@ -1,0 +1,73 @@
+extends layouts/default
+
+block pageVar
+    -pageTitle = 'Главная страница';
+
+block content
+    -
+        var list =
+                [
+                    {
+                        ico: '/f/img/main/ico1.png',
+                        number: '1',
+                        text: 'Найдите код на оборотной стороне ключа банки'
+                    },
+                    {
+                        ico: '/f/img/main/ico2.png',
+                        number: '2',
+                        text: 'Введите код здесь и смотрите трансляцию'
+                    },
+
+                    {
+                        ico: '/f/img/main/ico3.png',
+                        number: '3',
+                        text: 'Наслаждайтесь бесплатным просмотром турниров'
+                    },
+
+
+                ]
+    .page-container
+        .main
+            .main-inner
+                .main__left.main-left.br--rb
+                    .content-wrapper
+                        .main-left__head
+                            .main-left__video.br-40
+                                a(href="#")
+                                    img(src="/f/img/big-video.png", alt="")
+                        .main-left__body
+                            .main-left__body-top
+                                h4.main-left__title Инструкции акции:
+                                .main-left__link.skew
+                                    a(href="#").skew__inner ПРАВИЛА АКЦИИ
+                            .main-left__body-bottom
+                                .main-left__list
+                                    each item in list
+                                        .main-left__list-item
+                                            .main-left__list-img
+                                                img(src=""+item.ico , alt="")
+                                            .main-left__list-info
+                                                .main-left__list-numb.skew
+                                                   .skew__inner.main-left__list-numb--size !{item.number}
+                                                .main-left__list-text !{item.text}
+                        .main-left__footer
+                            .main-left__footer-title
+                                | * 1 КОД ДАЕТ ПРАВО НА ОДНУ ТРАНСЛЯЦИЮ
+                            .main-left__footer-text
+                                | Один Бонус-код может быть использован для просмотра прямой трансляции одного любого турнира в период с «01» июня 2021 года по «31» декабря 2021 года включительно и не предполагает просмотр турниров в записи.
+
+                .main__right.br--rb
+                    .content-wrapper
+                        .main__right-bg
+                            img.main__right-bg--desktop(src="/f/img/gorilla-desktop.png", alt="")
+                            img.main__right-bg--mobile(src="/f/img/gorilla-mobile.png", alt="")
+
+        .content-wrapper
+            .main-banner
+            .banner-offer.banner-offer--pos
+                img(src="/f/img/bottom-bg.png", alt="")
+
+
+
+
+

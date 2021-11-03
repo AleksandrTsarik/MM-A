@@ -1,0 +1,14 @@
+{
+    "name": "ms/mma-series",
+    "authors": [
+        {
+            "name": "Aleksandr Pimahov",
+            "email": "pimahov@market-soft.ru"
+        }
+    ],
+    "require-dev": {
+        "symfony/console": "4.1.*"
+
+    }
+
+}

@@ -1,0 +1,113 @@
+// -
+//     var fighters = [
+//
+//         {
+//             fighter1: {
+//                 fighterImg: '/f/img/tournament/item1.png',
+//                 flagCountry: '/f/img/fighter/flag.svg',
+//                 fighterCountry: 'Россия',
+//                 fighterName: 'Александр Волков',
+//                 fighterStatus: 'Поражение',
+//             },
+//             mid: {
+//                 ko: 'TKO',
+//                 raund: 'Раунд: 1',
+//                 time: '02:08',
+//                 statistics: 'Статистика',
+//                 fightLabel: 'Главный бой',
+//             },
+//             fighter2: {
+//                 fighterImg: '/f/img/tournament/item2.png',
+//                 flagCountry: '/f/img/fighter/flag.svg',
+//                 fighterCountry: 'Россия',
+//                 fighterName: 'Федор Емельяненко',
+//                 fighterStatus: 'Победа',
+//             }
+//         },
+//         {
+//             fighter1: {
+//                 fighterImg: '/f/img/tournament/item1.png',
+//                 flagCountry: '/f/img/fighter/flag.svg',
+//                 fighterCountry: 'Россия',
+//                 fighterName: 'Александр Волков',
+//                 fighterStatus: 'Победа',
+//             },
+//             mid: {
+//                 ko: 'KO',
+//                 raund: 'Раунд: 1',
+//                 time: '02:08',
+//                 statistics: 'Статистика',
+//
+//             },
+//             fighter2: {
+//                 fighterImg: '/f/img/tournament/item2.png',
+//                 flagCountry: '/f/img/fighter/flag.svg',
+//                 fighterCountry: 'Россия',
+//                 fighterName: 'Федор Емельяненко',
+//                 fighterStatus: 'Поражение',
+//             }
+//         },
+//         {
+//             fighter1: {
+//                 fighterImg: '/f/img/tournament/item1.png',
+//                 flagCountry: '/f/img/fighter/flag.svg',
+//                 fighterCountry: 'Россия',
+//                 fighterName: 'Александр Волков',
+//                 fighterStatus: 'Победа',
+//             },
+//             mid: {
+//                 ko: 'РЕШЕНИЕ',
+//                 raund: 'Раунд: 1',
+//                 time: '02:08',
+//                 statistics: 'Статистика'
+//             },
+//             fighter2: {
+//                 fighterImg: '/f/img/tournament/item2.png',
+//                 flagCountry: '/f/img/fighter/flag.svg',
+//                 fighterCountry: 'Россия',
+//                 fighterName: 'Федор Емельяненко',
+//                 fighterStatus: 'Поражение',
+//             }
+//         },
+//         {
+//             fighter1: {
+//                 fighterImg: '/f/img/tournament/item1.png',
+//                 flagCountry: '/f/img/fighter/flag.svg',
+//                 fighterCountry: 'Россия',
+//                 fighterName: 'Александр Волков',
+//                 fighterStatus: 'Поражение',
+//             },
+//             mid: {
+//                 ko: 'TKO',
+//                 raund: 'Раунд: 1',
+//                 time: '02:08',
+//                 statistics: 'Статистика'
+//             },
+//             fighter2: {
+//                 fighterImg: '/f/img/tournament/item2.png',
+//                 flagCountry: '/f/img/fighter/flag.svg',
+//                 fighterCountry: 'Россия',
+//                 fighterName: 'Федор Емельяненко',
+//                 fighterStatus: 'Победа',
+//             }
+//         },
+//
+//     ]
+
+//.t-fight__list
+//    each item,index in fighters
+//        .t-fight__item
+//            if item.fighter1.mainBattle
+//                .t-fight__item--batle !{item.fighter1.mainBattle}
+//            .t-fight__left
+//                +mixinFighter(item.fighter1)
+//            .t-fight__mid
+//                .t-fight__ko.skew
+//                    .skew__inner !{item.mid.ko}
+//                .t-fight__time-raund
+//                    .t-fight__raund !{item.mid.raund}
+//                    .t-fight__time !{item.mid.time}
+//                .t-fight__link
+//                   a(href="#") !{item.mid.statistics}
+//            .t-fight__right
+//                +mixinFighter(item.fighter2)

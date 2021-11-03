@@ -1,0 +1,33 @@
+-
+    var newsItems = [
+        {
+            image: '/f/img/list/item1.png',
+            date: '14 июня 2021',
+            text: 'Горилла ММА Серия-34: Сердце и кулак Башкортостана – Результаты',
+        },
+        {
+            image: '/f/img/list/item1.png',
+            date: '14 июня 2021',
+            text: 'Горилла ММА Серия-34: Сердце и кулак Башкортостана – Результаты',
+        },
+        {
+            image: '/f/img/list/item2.png',
+            date: '9 июня 2021',
+            text: 'Горилла ММА Серия-34: Церемония взвешивания состоится 11 июн',
+        },
+        {
+            image: '/f/img/list/item2.png',
+            date: '9 июня 2021',
+            text: 'Горилла ММА Серия-34: Церемония взвешивания состоится 11 июн',
+        },
+    ]
+-;
+.news-info__list
+    each item in newsItems
+        .news-info__item.news-info-item
+            .news-info-item__inner
+                .news-info__img
+                    img(src=""+item.image, alt="")
+                .news-info__text
+                    .news-info-item__date !{item.date}
+                    .news-info-item__text !{item.text}

@@ -1,0 +1,183 @@
+extends layouts/default
+
+block pageVar
+    -pageTitle = 'tournament-page-ended';
+block content
+    -
+        var videoCard =
+                [
+                    {
+                        image: '/f/img/videocard/item1.png',
+                        date: '14 июня 2021',
+                        text: 'Горилла ММА Серия-34: Сердце и кулак Башкортостана – Результаты',
+                        url: '#',
+                    },
+                    {
+                        image: '/f/img/videocard/item2.png',
+                        date: '14 июня 2021',
+                        text: 'Горилла ММА Серия-34: Сердце и кулак Башкортостана – Результаты',
+                        url: '#',
+                    },
+                    {
+                        image: '/f/img/videocard/item3.png',
+                        date: '14 июня 2021',
+                        text: 'Горилла ММА Серия-34: Сердце и кулак Башкортостана – Результаты',
+                        url: '#',
+                    },
+                ]
+        var fighters = [
+
+            {
+                fighter1: {
+                    fighterImg: '/f/img/tournament/item1.png',
+                    flagCountry: '/f/img/fighter/flag.svg',
+                    fighterCountry: 'Россия',
+                    fighterName: 'Александр Волков',
+                    fighterStatus: 'Поражение',
+
+
+                },
+                mid: {
+                    ko: 'TKO',
+                    round: 'Раунд: 1',
+                    time: '02:08',
+                    statistics: 'Статистика',
+                    fightLabel: 'Главный бой',
+                },
+                fighter2: {
+                    fighterImg: '/f/img/tournament/item2.png',
+                    flagCountry: '/f/img/fighter/flag.svg',
+                    fighterCountry: 'Россия',
+                    fighterName: 'Федор Емельяненко',
+                    fighterStatus: 'Победа',
+                }
+            },
+            {
+                fighter1: {
+                    fighterImg: '/f/img/tournament/item1.png',
+                    flagCountry: '/f/img/fighter/flag.svg',
+                    fighterCountry: 'Россия',
+                    fighterName: 'Александр Волков',
+                    fighterStatus: 'Победа',
+                },
+                mid: {
+                    ko: 'KO',
+                    round: 'Раунд: 1',
+                    time: '02:08',
+                    statistics: 'Статистика',
+                    fightLabel: 'Главный бой',
+                },
+                fighter2: {
+                    fighterImg: '/f/img/tournament/item2.png',
+                    flagCountry: '/f/img/fighter/flag.svg',
+                    fighterCountry: 'Россия',
+                    fighterName: 'Федор Емельяненко',
+                    fighterStatus: 'Поражение',
+                }
+            },
+            {
+                fighter1: {
+                    fighterImg: '/f/img/tournament/item1.png',
+                    flagCountry: '/f/img/fighter/flag.svg',
+                    fighterCountry: 'Россия',
+                    fighterName: 'Александр Волков',
+                    fighterStatus: 'Победа',
+                },
+                mid: {
+                    ko: 'РЕШЕНИЕ',
+                    round: 'Раунд: 1',
+                    time: '02:08',
+                    statistics: 'Статистика'
+                },
+                fighter2: {
+                    fighterImg: '/f/img/tournament/item2.png',
+                    flagCountry: '/f/img/fighter/flag.svg',
+                    fighterCountry: 'Россия',
+                    fighterName: 'Федор Емельяненко',
+                    fighterStatus: 'Поражение',
+                }
+            },
+            {
+                fighter1: {
+                    fighterImg: '/f/img/tournament/item1.png',
+                    flagCountry: '/f/img/fighter/flag.svg',
+                    fighterCountry: 'Россия',
+                    fighterName: 'Александр Волков',
+                    fighterStatus: 'Поражение',
+                },
+                mid: {
+                    ko: 'TKO',
+                    round: 'Раунд: 1',
+                    time: '02:08',
+                    statistics: 'Статистика'
+                },
+                fighter2: {
+                    fighterImg: '/f/img/tournament/item2.png',
+                    flagCountry: '/f/img/fighter/flag.svg',
+                    fighterCountry: 'Россия',
+                    fighterName: 'Федор Емельяненко',
+                    fighterStatus: 'Победа',
+                }
+            },
+
+        ]
+    .page-container
+        .t-head__bg
+            .top__bg.top-bg--padding
+                .content-wrapper
+                    .t-head
+                        .t-head__info
+                            .t-head__date Суббота, 24 Июля, 19:00
+                            .t-head__name Горилла ММА Серия — 37
+                            .t-head__location Санкт-Петербург, Россия
+                        .t-head-link-block
+                            .t-head__link.t-head__link--red
+                                a(href="#").skew
+                                    .skew__inner купить трансляцию
+                            .t-head__link.t-head__link--black
+                                a(href="#").skew
+                                    .skew__inner купить билет
+                            .t-head__link.t-head__link--green
+                                a(href="#").skew
+                                    .skew__inner подробнее
+                    .t-head__img
+
+        .t-body
+            .content-wrapper
+                .t-body-img
+                    img(src="/f/img/tournament/bg.jpg", alt="")
+                .t-body-block__btn
+                    .t-body__link.t-body__link--red
+                        a(href="#").skew
+                            .skew__inner ОСНОВНОЙ КАРД
+                    .t-body__link
+                        a(href="#").skew
+                            .skew__inner ПРЕЛИМЫ
+                .t-fighter
+                    +mixinFighterList(fighters)
+                .banner-commercial рекламный баннер
+                .t-fighter
+                    +mixinFighterList(fighters)
+
+
+            .f-video.top__bg.t-fighter__video
+                .content-wrapper
+                    .f-video__title.title__link
+                        h2.skew.title
+                            .skew__inner ВИДЕО
+                        .title__link-more
+                            a(href="#").more Показать все
+                    .video-block
+                        each item in videoCard
+                            +videoCard(item)
+            .f-foto
+                .content-wrapper
+                    .f-foto__title.title__link
+                        h2.skew.title
+                            .skew__inner ФОТО
+                        .title__link-more
+                            a(href="#").more Показать все
+                    include _blocks/fotocard
+            .content-wrapper
+                .banner-offer.banner-offer--pos
+                    img(src="/f/img/bottom-bg.png", alt="")
